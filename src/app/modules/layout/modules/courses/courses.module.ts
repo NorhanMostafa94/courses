@@ -6,6 +6,8 @@ import { CoursesComponent } from './pages/courses/courses.component';
 import { FilterCoursePipe } from './pipes/filter-course.pipe';
 import { FilterCourseByCategoryPipe } from './pipes/filter-course-by-category.pipe';
 import { CourseCardComponent } from './components/course-card/course-card.component';
+import { StudentCourseCardComponent } from './components/student-course-card/student-course-card.component';
+import { CoursesHeaderComponent } from './components/courses-header/courses-header.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { CourseCardComponent } from './components/course-card/course-card.compon
     CoursesComponent,
     FilterCoursePipe,
     FilterCourseByCategoryPipe,
-    CourseCardComponent
+    CourseCardComponent,
+    StudentCourseCardComponent,
+    CoursesHeaderComponent
   ],
   imports: [
     CommonModule,

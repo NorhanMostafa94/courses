@@ -1,0 +1,26 @@
+@import "abstracts/variables";
+
+.header-container{
+    height: 70px;
+    background-color: $background-color;
+    margin: 0 50px;
+    .filters-toggle {
+        display: none;
+        .icon {
+            color: $white-color;
+            font-size: 35px;
+        }
+    }
+    &__logo{
+        width: 150px;
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+    &__text{
+        color: $primary-green;
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,43 @@
+@import "abstracts/variables";
+
+.course-card {
+    height: 320px;
+    border-radius: 8px;
+    background-color: $dark-gray-color;
+    overflow: hidden;
+    &__image-container {
+        height: 180px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+    &__description-container {
+        .title {
+            color: $light-gray-2-color;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: break-word;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .subtitle-wrapper {
+            .subtitle-container {
+                color: $light-gray-color;
+                font-size: 15px;
+                .icon-container {
+                    .icon {
+                        color: $primary-green;
+                        &--orange {
+                            color: $orange-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
