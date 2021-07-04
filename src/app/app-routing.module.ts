@@ -3,14 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'courses',
-    loadChildren: () => import('./modules/courses/courses.module').then(m => m.CoursesModule)
-  },
-  {
     path: '',
-    redirectTo: 'courses',
-    pathMatch: 'full'
-  }
+    loadChildren: () => import('./modules/layout/layout.module').then(m => m.LayoutModule)
+  },
+  
 ]
 
 @NgModule({

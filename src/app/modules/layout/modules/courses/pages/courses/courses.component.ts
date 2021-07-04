@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from 'src/app/shared/services/shared.service';
 import { Course } from '../../models/course';
 import { CoursesService } from '../../services/courses.service';
 
@@ -54,12 +55,14 @@ export class CoursesComponent implements OnInit {
 
   courses: Course[] = [];
 
-  showFilter: boolean;
+  studentCourses: Course[] = [];
 
-  constructor(private coursesService: CoursesService) { }
+  constructor(private coursesService: CoursesService,
+    public sharedService:SharedService) { }
 
   ngOnInit(): void {
     this.getCoursesList();
+    this.getStudentCourses();
   }
 
   /**
@@ -71,16 +74,30 @@ export class CoursesComponent implements OnInit {
     });
   }
 
-  filterCoursesByDuration(checkbox) {
+  /**
+   * `filterCoursesByDuration` to filter by duration
+   */
+  filterCoursesByDuration() {
     this.checkedList = this.checkboxList.filter(checkbox => checkbox.checked);
   }
 
-  filterCoursesByCategory(checkbox) {
+   /**
+   * `filterCoursesByCategory` to filter by category
+   */
+  filterCoursesByCategory() {
     this.checkedCategoriesList = this.categoryList.filter(checkbox => checkbox.checked);
   }
 
-  toggleFilter(){
-    this.showFilter = !this.showFilter;
+  /**
+   * `getStudentCourses()` to get the list of courses for specific student
+   */
+  getStudentCourses() {
+    this.coursesService.getCourses().subscribe(res => {
+      this.coursesService.getStudentCourses(1233, res).subscribe(courses => {
+        this.studentCourses = courses;
+      })
+
+    })
   }
 
 

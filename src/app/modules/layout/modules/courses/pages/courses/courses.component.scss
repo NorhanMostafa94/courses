@@ -1,13 +1,6 @@
 @import "abstracts/variables";
 
 .courses-page {
-    .filters-toggle{
-        display: none;
-        .icon-menu{
-            color: $white-color;
-            font-size: 35px;
-        }
-    }
     &__filters-wrapper {
         &.show {
             display: block;
@@ -19,6 +12,9 @@
             .filters-title {
                 color: $white-color;
                 font-size: 2rem;
+                &--green {
+                    color: $primary-green;
+                }
             }
             .filters-container {
                 padding-bottom: 18px;
@@ -55,6 +51,13 @@
                             font-size: 1.8rem;
                             margin-inline-start: 5px;
                         }
+                    }
+                }
+                .student-course-card-wrapper{
+                    max-height: 170px;
+                    overflow-y: scroll;
+                    .student-course-card-container {
+                        border-bottom: 1px solid rgba($color: $light-gray-color, $alpha: 0.1);
                     }
                 }
             }

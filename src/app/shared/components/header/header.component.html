@@ -1,3 +1,12 @@
 <header class="header-container d-flex align-items-center justify-content-between">
-
+    <div class="filters-toggle" (click)="toggleFilter()">
+        <span class="icon-menu icon" *ngIf="!sharedService.isShowFilter"></span>
+        <span class="icon" *ngIf="sharedService.isShowFilter">x</span>
+    </div>
+    <div class="header-container__logo">
+        <img src="assets/images/logo.png" alt="logo" srcset="">
+    </div>
+    <div class="header-container__text">
+        Home
+    </div>
 </header>

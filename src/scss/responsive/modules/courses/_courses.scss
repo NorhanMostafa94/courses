@@ -3,6 +3,9 @@
         .filters-toggle {
             display: block !important;
         }
+        &__header{
+            display: none;
+        }
         &__filters-wrapper {
             // display: none;
             position: absolute;

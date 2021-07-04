@@ -6,7 +6,35 @@ body {
     font-size: 1.6rem;
     font-weight: 400;
     background-color: $background-color;
+    overflow-y: scroll;
 }
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 4px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $background-color;
+    border-radius: 10px;
+  }
+
+  // :root {
+  //   scrollbar-width: thin;
+  //   border-radius: 10px;
+  // }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $primary-green;
+  }
 
 html,
 body {

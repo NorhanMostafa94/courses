@@ -1,0 +1,27 @@
+.btn {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    border: 0;
+    text-align: center;
+    color: $white-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none !important;
+
+    &:focus,
+    &:active {
+        outline: none !important;
+        box-shadow: unset;
+    }
+
+    &--white {
+        color: $primary-green;
+        background-color: $white-color;
+        &:hover {
+            color: $white-color;
+            background-color: $primary-green;
+        }
+    }
+}
