@@ -1,0 +1,68 @@
+@import "abstracts/variables";
+
+.courses-page {
+    .filters-toggle{
+        display: none;
+        .icon-menu{
+            color: $white-color;
+            font-size: 35px;
+        }
+    }
+    &__filters-wrapper {
+        &.show {
+            display: block;
+        }
+        .filters-wrapper {
+            background-color: $dark-gray-color;
+            border-radius: 8px;
+            .filters-title {
+                color: $white-color;
+                font-size: 2rem;
+            }
+            .filters-container {
+                padding-bottom: 18px;
+                border-bottom: 1px solid rgba($color: $light-gray-color, $alpha: 0.1);
+                .title {
+                    color: $white-color;
+                    font-size: 1.8rem;
+                }
+                .checkboxs-container {
+                    .checkbox-container {
+                        input {
+                            position: absolute;
+                            opacity: 0;
+                            &:checked ~ .checkbox-sign {
+                                background-color: $primary-green;
+                                .icon-checked {
+                                    display: block;
+                                    color: $dark-gray-color;
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                        .checkbox-sign {
+                            width: 15px;
+                            height: 15px;
+                            background-color: $white;
+                            border-radius: 2px;
+                            .icon-checked {
+                                display: none;
+                            }
+                        }
+                        .checkbox-name {
+                            color: $white-color;
+                            font-size: 1.8rem;
+                            margin-inline-start: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__courses-wrapper {
+        transition: 0.3s all;
+        .course-container {
+            transition: 0.3s all;
+        }
+    }
+}
