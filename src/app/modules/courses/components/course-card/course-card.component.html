@@ -1,0 +1,26 @@
+<div class="course-card">
+    <div class="course-card__image-container">
+        <img [src]="course.CourseImg" [alt]="course.CourseName">
+    </div>
+    <div class="course-card__description-container p-3">
+        <div class="title">{{course.CourseName}}</div>
+        <div class="description-container d-flex flex-wrap justify-content-between">
+            <div class="subtitle-wrapper mt-3">
+                <div class="subtitle-container d-flex align-items-center">
+                    <span class="me-4">{{course.courseLevel}}</span>
+                    <div class="icon-container">
+                        <span class="icon icon-group" [ngClass]="{'icon--orange': course.AvailableSeats < 10}"></span>
+                        <span class="mx-2">{{course.AvailableSeats}}</span>
+                    </div>
+                </div>
+                <div class="subtitle-container d-flex align-items-center my-2">
+                    <span>Duration: {{course.CourseDuration}}H</span>
+                    <div class="mx-4">${{course.CoursePrice}}</div>
+                </div>
+            </div>
+            <div class="btn-container d-flex align-items-end">
+                <button>add to cart</button>
+            </div>
+        </div>
+    </div>
+</div>
